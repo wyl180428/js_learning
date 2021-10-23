@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建数组
+        var arr=[1,3,5,65,32,23,43,21]
+        // 利用new Array
+        // var arr1=new Array(3)  3代表数组的长度
+        var arr1=new Array(1,3,5,65,32,23,43,21)
+        // 检测数组
+        // 1.instanceof
+        console.log(arr instanceof Array); //true
+        // Array.isArray(参数)  h5新增 ie9以上版本
+        console.log(Array.isArray(arr1)); //true
+
+        // 添加数组元素
+        // 1.push()添加在数组末尾
+        arr.push(56)
+        console.log(arr);
+        // push返回值是新数组的长度
+
+        // 2.unshift 在数组前面添加元素
+        arr.unshift(12)
+        console.log(arr);
+        // unshift返回值也是新数组的长度
+
+        // 删除数组元素
+        // 1.pop() 可以删除数组的最后一个元素
+        // 返回值是删除的元素 无参数
+        // 2.shift()可以删除数组的第一个元素
+        // 返回值是第一个元素
+        console.log(arr1.shift());
+
+        // 数组排序
+        // 1.reverse() 可以反转数组
+        console.log(arr.reverse());
+        // 2.sort()可以排序
+        console.log(arr.sort((a,b)=>{
+            return a-b//升序排列
+            // return b-a 降序排列
+        }));
+
+        // 返回数组索引号
+        console.log(arr.indexOf(2));//-1  数组中没有的元素返回-1
+        console.log(arr.indexOf(65,23));//只返回第一个对应值的索引号
+
+        // 数组转换为字符串
+        // toString()
+        var arr2=[1,2,3]
+        console.log(arr2.toString());
+        // join('分隔符') 
+        console.log(arr2.join('-'));
+    </script>
+</body>
+</html>

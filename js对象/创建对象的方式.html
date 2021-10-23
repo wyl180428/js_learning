@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.利用对象字面量创建对象{}
+        var obj={
+            name:'wyl',
+            age:22,
+            sex:'男',
+            sayHi:function(){
+                console.log('Hi');
+            }
+        }
+
+        //2.使用对象
+        // 调用对象的属性
+        console.log(obj.sex);
+        console.log(obj['age']);
+        // 调用对象的方法
+        obj.sayHi()
+
+        // 创建变量的第二种方式
+        var obj1=new Object()
+        obj1.name='lul'
+        obj1.age=22
+        obj1.sex='女'
+        obj1.saynihao=function(){
+            console.log('nihao');
+        }
+
+        //用构造函数创建对象
+        // 构造函数的首字母要大写
+
+        function Star(name,age,sex){
+            this.name=name
+            this.age=age
+            this.sex=sex
+        }
+
+        var obj2=new Star('yt',22,'男')
+    </script>
+</body>
+</html>

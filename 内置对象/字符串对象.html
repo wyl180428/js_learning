@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本包装类型：就是把简单数据类型包装成复杂数据类型
+        // 字符串不可变，变化是因为内存中开辟了一个新的空间
+
+        // 字符串也可以使用indexOf()
+
+        var str='123456654321'
+        console.log(str.indexOf('4'));
+        console.log(str.indexOf('4',5));//从5开始往后查找
+
+
+        // 根据位置返回字符
+        console.log(str.charAt(4));
+        // h5新增
+        console.log(str[4]);
+        // 根据位置返回字符的ASCII码
+        console.log(str.charCodeAt(2));
+
+        // 字符串的拼接
+        console.log(str.concat('red'));
+
+        // 字符串的截取
+        console.log(str.substr(2,4)); //第一个是索引号，第二个为截取的长度
+
+        // 字符串的替换
+        console.log(str.replace('1','0')); //将1替换为0
+
+        // 字符串的分割
+        console.log(str.split('6'));//返回值为数组
+
+        // 求数组某个元素出现的次数 
+        var arr=['red','blue','red','green','pink','red']
+        var index=arr.indexOf('red')
+        var num=0
+        while(index!==-1){
+            console.log(index);
+            num++
+            index = arr.indexOf('red',index + 1)
+        }
+
+        console.log(num);
+    </script>
+</body>
+</html>

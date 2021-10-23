@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math.PI);//圆周率
+
+        console.log(Math.max(1,3,45,67,3));//最大值
+        console.log(Math.max(1,3,4,'wyl'));//NaN
+        console.log(Math.min(1,2,3));//最小值
+
+        // 绝对值方法
+        console.log(Math.abs(-90));
+        console.log(Math.abs('-1'));//1 隐式转换
+
+
+        // 取值方法
+        // 1.Math.floor() 向下取整
+            console.log(Math.floor(1.1));//1
+            console.log(Math.floor(1.1));//1
+        // 2.Math.ceil() 向上取整
+            console.log(Math.ceil(1.1));//2
+            console.log(Math.ceil(1.8))//2
+        // 3.Math.round()  四舍五入
+            console.log(Math.round(1.1));//1
+            console.log(Math.round(1.8))//2
+
+
+        // Math.random()随机数   0<=x<1
+        console.log(Math.random());
+
+        // 任意两数之间的随机数，并包含这两个数
+        // Math.floor(Math.random()*(max - min +1)) + min
+
+        // 猜数字 1-50 10次机会
+        var num=Math.floor(Math.random()*50 + 1)
+        var index=0
+        while(index<10){
+            var result=prompt('请输入数字：')-0
+            if(result>num){
+                alert('大了')
+            }else if(result<num){
+                alert('小了')
+            }else{
+                alert('对了')
+                break;
+            }
+            index+=1
+        }
+
+    </script>
+</body>
+</html>

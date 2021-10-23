@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arguments 里面存储了所有传过来的实参(只有函数有此对象,每个函数内置的)
+        // arguments是伪数组,不是正真的数组
+        // 1.具有数组的length属性
+        // 2.按照索引方式进行存储
+        // 3.没有数组的一些方法
+        // 4.可以被遍历
+
+        // 翻转数组
+        // function funSum(){
+        //     var newStr=[]
+        //     for(var i=arguments[0].length-1;i>=0;i--){
+        //         newStr[newStr.length]=arguments[0][i]
+        //     }
+        //     return newStr
+        //     // console.log(arguments[0]);
+        // }
+
+        //  console.log(funSum([12,4,5,7]));
+        //  console.log(funSum([12,4,5,7,67,23]));
+
+
+        // 冒泡排序
+        function sort(){
+            var num=arguments[0]
+            for(var i=0;i<num.length-1;i++){
+                for(var j=0;j<num.length-i-1;j++){
+                    if(num[j]>num[j+1]){
+                        var temp=num[j+1]
+                            num[j+1]=num[j]
+                            num[j]=temp
+                    }
+                }
+            }
+            return num
+        }
+        console.log(sort([12,4,7,67,23,89,5,43]));
+    </script>
+</body>
+</html>

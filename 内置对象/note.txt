@@ -1,0 +1,5 @@
+js对象有：1.自定义对象 2.内置对象 3.浏览器对象
+
+内置对象是js语言中自带的属性和方法
+
+查文档去学习内置对象（MDN）（https://developer.mozilla.org/zh-CN/docs/Web）

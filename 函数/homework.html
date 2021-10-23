@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 简易计算器
+        // function counter(num1,num2,operation){
+        //         switch (operation){
+        //             case '+': return num1+num2
+        //             break;
+        //             case '-': return num1-num2
+        //             break
+        //             case '*': return num1*num2
+        //             break
+        //             case '/': return num1/num2
+        //             break
+        //         }
+        // }
+
+        // var result=counter(12,45,'+')
+        // console.log(result);
+
+        //弹出两个数的最大值
+        // function getMax(num1,num2){
+        //         return num1>num2 ?num1 :num2
+        // }
+
+        // alert(getMax(2,5))
+
+        // 弹出3个不同数的最大值
+        // function getMax(num1,num2,num3){
+        //     var num=num1>num2 ?num1 :num2
+        //     return num>num3?num:num3
+        // }
+
+        // alert(getMax(20,9,8))
+
+        // 判断是否是素数
+        function estNum(num){
+            for(var i=2;i<=9;i++){
+                if(num%i==0){
+                    return '这不是素数'
+                }else{
+                    return '这是素数'
+                }
+            }
+        }
+
+        console.log(estNum(23));
+    </script>
+</body>
+</html>

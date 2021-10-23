@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.创建电脑对象
+        // var computer={
+        //     color:black,
+        //     wight:50,
+        //     type:'huawei',
+        //     watch:function(){
+        //         console.log('看电影');
+        //     },
+        //     sing:function(){
+        //         console.log('听音乐');
+        //     },
+        //     code:function(){
+        //         console.log('敲代码');
+        //     }
+        // }
+
+        // 2.创建按钮
+        // var button={
+        //     width:50,
+        //     hight:20,
+        //     bgcolor:black,
+        //     click:function(){
+        //         console.log('点击行为');
+        //     }
+        // }
+
+
+        // 3.创建一个车对象
+        // var car={
+        //     color:black,
+        //     wight:50,
+        //     type:'huawei',
+        //     zairen:function(){
+        //         console.log('载人');
+        //     },
+        //     la:function(){
+        //         console.log('拉货');
+        //     },
+        //     geng:function(){
+        //         console.log('耕田');
+        //     }
+        // }
+
+
+        // 4.函数 反转任意数组
+        // var newArr=[]
+        // function fan(num){
+        //     for(var i=num.length-1;i>=0;i--){
+        //         newArr[num.length-1-i]=num[i]
+        //     }
+        //     return newArr
+        // }
+        // console.log(fan([2,5,7,4,9,6]));
+
+        // 5.对数组进行排序
+        // function sort(num){
+        //     for(var i=0;i<num.length;i++){
+        //         for(var j=i;j<num.length-i-1;j++){
+        //             if(num[j]>num[j+1]){
+        //                var temp=num[j+1] 
+        //                num[j+1]=num[j]
+        //                num[j]=temp
+        //             }
+        //         }
+        //     }
+        //     return num
+        // }
+        // console.log(sort([2,5,7,3,4,33,21,67,34]));
+
+        // 6.简易计算器
+
+        do{
+            var message=prompt('欢迎使用简易计算器：\n'+'1.加法运算 \n'+'2.减法法运算 \n'+'3.乘法运算 \n'
+        +'4.除法运算 \n'+'5.退出\n'+'请输入您的选项')
+        switch(message){
+            case '1':
+            var num1=prompt('请输入第一个数字：')-0
+            var num2=prompt('请输入第二个数字：')-0
+            alert(num1+num2)
+            break;
+            case '2':
+            var num1=prompt('请输入第一个数字：')-0
+            var num2=prompt('请输入第二个数字：')-0
+            alert(num1-num2)
+            break;
+            case '3':
+            var num1=prompt('请输入第一个数字：')-0
+            var num2=prompt('请输入第二个数字：')-0
+            alert(num1*num2)
+            break;
+            case '4':
+            var num1=prompt('请输入第一个数字：')-0
+            var num2=prompt('请输入第二个数字：')-0
+            alert(num1/num2)
+            break;
+        }
+        }while(message!='5')
+        
+    </script>
+</body>
+</html>

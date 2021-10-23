@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str='abaasdffggghhjjkkgfddsssss3444343'
+        // 1.字符串的长度
+        console.log(str.length);
+
+        // 2.指定位置的字符
+        console.log(str.charAt(0));
+        console.log(str.charAt(3));
+        console.log(str.charAt(5));
+        console.log(str.charAt(9));
+
+        // 3.检测 'i','c','b'是否在字符串中存在
+        if(str.indexOf('i')===-1){
+            console.log('i不存在');
+        }else{
+            console.log('i存在');
+        }
+        if(str.indexOf('c')===-1){
+            console.log('c不存在');
+        }else{
+            console.log('c存在');
+        }
+        if(str.indexOf('b')===-1){
+            console.log('b不存在');
+        }else{
+            console.log('b存在');
+        }
+
+        // 4.替换字符 'g'-'22' 'ss'-'b'
+
+        for(let i=0;i<str.length;i++){
+            str= str.replace('g','22')
+            str = str.replace('ss','b')
+        }
+        console.log(str);
+
+        // 5.截取1-5的字符串
+        console.log(str.substr(1,5));
+
+        // 6.找出出现次数最多的字符和出现的次数
+        var obj={}
+        var max=0
+        for(let i=0;i<str.length;i++){
+            if(obj[str.charAt(i)]){
+                obj[str.charAt(i)]++
+            }else{
+                obj[str.charAt(i)]=1
+            }
+        }
+       for(k in obj){
+            if(obj[k]>max){
+                max=obj[k]
+                str=k
+            }
+       }
+       console.log(max);
+       console.log(str);
+    </script>
+</body>
+</html>

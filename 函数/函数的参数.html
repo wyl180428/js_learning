@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数可以通过传递参数以实现函数重复执行不同代码
+        // 函数形参与实参个数不匹配
+            // 如果形参与实参个数匹配，正常输出结果
+            // 如果形参大于实参个数，形参可以看作没有接收值的变量
+            // 如果形参小于实参个数，超出的实参不参加运算
+
+        // 利用函数求两个数的最大值
+        // function getMax(num1,num2){
+        //     // if(num1>num2){
+        //     //     return num1
+        //     // }else{
+        //     //     return num2
+        //     // }
+        //     // 可以用三元运算符求最大值
+        //     return num1>num2 ? num1 : num2
+        // }
+
+        // 利用函数求数组中的最大值
+        function getArrMax(num){
+            var arr=num[0]
+            for(var i=1;i<num.length;i++){
+                if(num[i]>arr){
+                    arr=num[i]
+                }
+            }
+            return arr
+
+        }
+
+        console.log(getArrMax([2,34,56,78,90]));
+    </script>
+</body>
+</html>

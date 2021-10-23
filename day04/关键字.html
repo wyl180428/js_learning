@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // continue用于立即退出此次循环，其他正常执行
+        // break可以退出整个循环
+
+        for(var i = 1;i<10;i++){
+            if(i==3){
+                continue    //不输出3
+            }
+            if(i==8){    //不输出8以后的所有数字
+                break
+            }
+            console.log(i);
+        }
+
+    </script>
+</body>
+</html>

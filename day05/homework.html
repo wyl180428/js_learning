@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.1-100所有数的和与平均值
+        // var sum = 0
+        // for (var i = 1;i<=100;i++) {
+        //     sum += i
+        // }
+        // console.log(sum);
+        // console.log(sum/100);  //平均值
+
+        // 2.1-100所有偶数的和
+        // var sum = 0
+        // for (var i = 1;i<=100;i++) {
+        //     if(i%2==0){
+        //         sum += i
+        //     }
+        // }
+        // console.log(sum);
+
+        // 3.求1-100中7的倍数的和
+        // var sum = 0
+        // for (var i = 1;i<=100;i++) {
+        //     if(i%7==0){
+        //         sum += i
+        //     }
+        // }
+        // console.log(sum);
+
+        // 4.输出五行五列的星星
+        // var str = ''
+        // for (var i = 0;i <5;i++) {
+        //     for (var j =0 ; j< 5; j++){
+        //         str+='★'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 5.打印三角形
+        // var str = ''
+        // for (var i = 0;i <5;i++) {
+        //     for (var j =0 ; j< i+1; j++){
+        //         str+='★'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 6.打印九九乘法表
+        // var str = ''
+        // for (var i = 1;i <10;i++) {
+        //     for (var j =1 ; j< i; j++){
+        //         str+=j+'x'+i+'='+i*j+'\t'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 7.提示用户登录,如果用户名不为''admin',密码不为"123456',就一直弹出
+        // do{
+        //     var user=prompt('用户名为:')
+        //     var password=prompt('密码为:')
+        // }while(user!=='admin' || password !=='123456')
+        // alert('登录成功')
+
+
+        // 8.求1-100除个位数为3的数字的累加和
+        // var sum = 0
+        // for (var i = 1;i<=100;i++) {
+        //     if(i%10==3){
+        //        continue
+        //     }
+        //     sum += i
+        // }
+        // console.log(sum);
+
+        // 9.简易ATM机
+        var price=100
+        do{
+            var num = prompt('请输入你的操作:'+'\n'+'1.存钱'+'\n'+'2.取钱'+'\n'+'3.显示余额'+'\n'+'4.退出')
+            if(num=='1'){
+                var num1 = prompt('你要存多少钱?')
+                price+=(num1-0)
+                alert('你现在还剩'+price)
+            }else if(num=='2'){
+                var num2= prompt('你要取多少钱?')
+                price=price-(num2-0)
+                alert('你现在还剩'+price)
+            }else if(num=='3'){
+                alert('你现在还剩'+price)
+            }
+        }while(num!=='4')
+        
+        
+    </script>
+</body>
+</html>
