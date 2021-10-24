@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2021-10-24</div>
+    <ul>
+        <li>可以</li>
+        <li>可以</li>
+        <li>可以</li>
+        <li>可以</li>
+        <li>可以</li>
+    </ul>
+
+    <div class="date">2022</div>
+    <script>
+        var timer = document.getElementById('time')
+        console.dir(timer)
+
+        // 返回的是一个伪数组
+        var lis = document.getElementsByTagName('li')
+        console.log(lis);
+
+        var date = document.getElementsByClassName('date')
+        console.log(date);
+
+       var a=document.querySelector('#time')
+       console.log(a);
+
+       var b=document.querySelectorAll('li')
+       console.log(b);
+
+        //获取body元素
+        var body = document.body
+        console.log(body);
+        
+        // 获取html元素
+        var html = document.documentElement
+        console.log(html);
+    </script>
+</body>
+</html>

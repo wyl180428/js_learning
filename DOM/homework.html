@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input{
+            color:#999;
+        } */
+
+        /* 
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .destroy{
+            width: 30px;
+            height: 30px;
+            background-color: purple;
+        } 
+        */
+
+        /* .box{
+            width: 100px;
+            height: 200px;
+             background-color: purple;
+        } 
+
+        .box1{
+            height: 30px;
+            background-color: red;
+        }
+        .box2{
+            height: 170px;
+            background-color: rgb(91, 68, 156);
+            display: none;
+        }  */
+    </style>
+</head>
+<body>
+    <!-- <input type="text" value="邮箱/手机号"> -->
+
+
+    <!-- <div class="box">
+        <div class="destroy"></div>
+    </div> -->
+
+    <!-- <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div> -->
+    <button>点击开关灯</button>
+
+    <script>
+        // input元素的显示和隐藏
+        // var ipt = document.querySelector('input')
+        // ipt.onfocus=function(){
+        //     if(this.value==="邮箱/手机号"){
+        //         this.value=''
+        //     }
+        //     this.style.border='none'
+        //     this.style.outline='pink 1px solid'
+        //     this.style.color='black'
+        // }
+        // ipt.onblur=function(){
+        //     if(this.value===""){
+        //         this.value='邮箱/手机号'
+        //     }
+        //     this.style.border='solid 1px black'
+        //     this.style.outline='none'
+        // }
+
+        // 京东关闭广告
+        // var box =document.querySelector('.box')
+        // var destroy =document.querySelector('.destroy')
+
+        // destroy.onclick=function(){
+        //     box.style.display='none'
+        // }
+
+        // 下拉菜单
+        //  var box1=document.querySelector('.box1')  
+        //  var box2=document.querySelector('.box2')  
+        //  box1.onmouseover=function(){
+        //      box2.style.display='block'
+        //  }
+        //  box1.onmouseout=function(){
+        //      box2.style.display='none'
+        //  }
+        //  box2.onmouseover=function(){
+        //      box2.style.display='block'
+        //  }
+        //  box2.onmouseout=function(){
+        //      box2.style.display='none'
+        //  }
+
+        // 开关灯
+        var btn = document.querySelector('button')
+        var flag=true
+        btn.onclick=function(){
+            flag=!flag
+            if(flag===false){
+                document.body.style.backgroundColor='black'
+            }else{
+                document.body.style.backgroundColor='white'
+            } 
+        }
+    </script>
+</body>
+</html>

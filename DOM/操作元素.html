@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change {
+            background-color: antiquewhite;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button>时间</button>
+    <div>确定时间</div>
+    <input type="password" id="pwd">
+    <script>
+        var btn = document.querySelector('button')
+        var div =document.querySelector('div')
+
+        //  表单元素的操作
+        var pwd = document.getElementById('pwd')
+        btn.onclick=() => {
+            div.innerText = '2021'
+            // 表单元素的操作
+            pwd.type = 'text'
+            // 样式属性的操作
+            // div.style.backgroundColor = 'green'
+            // className会覆盖之前的类名
+            div.className = 'change'
+        }
+
+        div.innerHTML = '<strong>2020<strong>'
+
+        // innerText和innerHTML都可以获取内容和修改内容
+        // innerText不识别HTML标签，同时去除空格和换行  
+
+
+        // 修改元素属性 与对象属性的修改一样
+         
+    </script>
+</body>
+</html>

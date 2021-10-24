@@ -1,0 +1,7 @@
+DOM是DocumentObjectModel的简称，是W3c推荐的标准接口
+
+DOM可以获取页面中的元素
+    1.可以通过id获取（getElementById()）
+    2.可以通过标签名（getElementByTagName())
+    3.可以通过类名（h5新增）（getElementByClassName()）
+    4.可以通过选择器（h5新增）（querySelector）
