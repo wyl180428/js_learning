@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <span>x</span>
+    <ul>
+        <li>内容1</li>
+        <li>内容2</li>
+        <li>内容3</li>
+        <li>内容4</li>
+        <li>内容5</li>
+    </ul>
+    <!-- <div class="box">
+        <span class="box1"></span>
+    </div> -->
+
+    <script>
+        // 父子节点
+        // var box1 = document.querySelector('.box1')
+        // console.log(box1.parentNode);
+
+        var ul=document.querySelector('ul')
+        console.log(ul.childNodes);//得到是所有子节点
+        console.log(ul.children);//得到的是所有元素子节点
+        console.log(ul.firstElementChild);//兼容ie9以上
+
+        // 兄弟节点
+        var div=document.querySelector('div')
+        console.log(div.nextSibling);//得到到是兄的所有节点
+        console.log(div.nextElementSibling);
+
+
+        // 创建节点
+        var li =document.createElement('li')
+        li.innerHTML='123'
+
+        // 添加节点
+        ul.appendChild(li)//在所有子元素后面添加
+        ul.insertBefore(li,ul.children[2]) //在某个节点前面添加
+
+        //删除节点
+        ul.removeChild(ul.children[0]) 
+
+        // 复制节点
+        var li1=ul.children[0].cloneNode() //参数为空或者为false,为浅拷贝，只复制元素节点不复制其他内容；如果为true则是深拷贝，复制全部节点
+        ul.appendChild(li1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table td{
+            border-bottom:1px solid black;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+
+    <table cellspacing=0>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+</table>
+
+    <script>
+        var btns=document.querySelectorAll('button')
+        var btn=false
+        for(var i = 0 ;i < btns.length ; i++){
+            btns[i].onclick=function(){
+                for(var j = 0 ;j < btns.length ; j++){
+                    btns[j].style.backgroundColor=''
+                }
+                this.style.backgroundColor='pink'
+            }
+        }
+
+        var trs = document.querySelector('table').querySelectorAll('tr')
+        for(var i= 0 ;i<trs.length;i++){
+            trs[i].onmouseover=function(){
+                this.style.backgroundColor='pink'
+            }
+            trs[i].onmouseout=function(){
+                this.style.backgroundColor=''
+            }
+        }
+    </script>
+</body>
+</html>

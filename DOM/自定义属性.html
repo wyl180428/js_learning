@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" index=1></div>
+    <script>
+        // 获取属性值
+        // 1.element.属性(获取的内置的属性)
+        var div=document.querySelector('div');
+        console.log(div.id);
+        // 2.element.getAttribute方法（获取的自定义的属性）
+        console.log(div.getAttribute('index'));
+
+        // 设置属性值
+        div.id='test'
+        console.log(div.id);
+
+        div.setAttribute('index', 2)
+        console.log(div.getAttribute('index'));
+        div.setAttribute('class','inner')
+        console.log(div.className);
+
+
+        // 移除属性值
+        div.removeAttribute('index')
+        console.log(div);
+
+        // h5新增的自定义属性，在所有自定义属性前加'data-'
+        // h5新增的获取属性的方法
+        div.setAttribute('data-set',20)
+        console.log(div.dataset);//只能获取data开头的自定义属性
+        console.log(div.dataset.set);
+        console.log(div.dataset['set']);
+    </script>
+</body>
+</html>
