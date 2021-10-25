@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        //js以前是单线程执行
+        // js现在可以创建多个任务，同时进行
+
+        // 同步任务都在主线程中执行，形成一个执行栈
+        // 回调函数，事件，定时器属于异步任务
+
+        // 主线程任务执行完毕，会观察异步任务队列有没有内容，如果有，将它放在主线程中执行
+        // 由于主线程不断获得任务，执行任务，在获得任务，执行任务，所以这种机制叫做事件循环
+   </script> 
+</body>
+</html>

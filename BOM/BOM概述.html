@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // BOM是浏览器对象模型  兼容性差  没有标准
+        // window对象是浏览器的顶级对象
+
+        // window的常见事件
+        window.onload=function(){}//页面全部加载完毕（包括图片，css,js文件），再执行回调函数
+
+        document.addEventListener('DOMContentLoaded',function(){}) //页面中的DOM加载完毕就执行回调函数
+
+        window.addEventListener('resize',function(){})//当浏览器窗口大小发生变化时，执行函数 
+    </script>
+</body>
+</html>

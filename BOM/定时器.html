@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击停止定时器</button>
+    <script>
+        // 定时器
+
+
+        // setTimeout 只调用一次
+        var timer = setTimeout(() => {   //调用函数可以写函数名
+            console.log(1);
+        }, 1000);//延迟时间 单位是毫秒
+        var btn= document.querySelector('button')
+        btn.addEventListener('click',()=>{
+             // 停止定时器
+            clearTimeout(timer)
+            clearInterval(timer1)
+        })
+        // setInterval   重复调用
+        var timer1=setInterval(() => {
+            console.log(12);
+        }, 1000);
+    </script>
+</body>
+</html>
