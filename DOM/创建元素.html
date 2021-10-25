@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script>
+        // 3种创建元素的方式
+        // 1. document.write
+        document.write('<div> 123 </div>')//页面文档流加载完毕，在调用会导致页面重绘
+
+        // 2.innerHTML
+        var inner=document.querySelector('.inner')
+        inner.innerHTML='<a href="javascript:">123</a>'
+        // 3.createElement
+        var create=document.querySelector('.create')
+        create.appendChild(document.createElement('a'))
+    </script>
+</body>
+</html>
