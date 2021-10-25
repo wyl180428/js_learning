@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>传统事件注册</button>
+    <button>方法监听注册事件</button>
+
+    <script>
+        var button =document.querySelectorAll('button')
+
+        // 传统事件注册有唯一性
+        button[0].onclick=function(){
+            alert('点击1')
+        }
+        button[0].onclick=function(){
+            alert('点击2')
+        }//只会弹出‘点击2’
+
+        // 事件监听注册（addEventListener）
+        button[1].addEventListener('click',function(){
+            alert('11')
+        })
+        button[1].addEventListener('click',function(){
+            alert('22')
+        })
+
+        // attachEvent  ie9以前的方法
+        button[1].attachEvent('onclick',function(){
+            alert('33')
+        })
+    </script>
+</body>
+</html>

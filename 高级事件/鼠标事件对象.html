@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 200px;
+            background-color: brown;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <script>
+        // 鼠标事件对象，就是鼠标触发事件产生的对象
+
+        // clientX  clientX 返回浏览窗口距左上角的x与y的坐标
+        // pageX  pageY    返回整个页面文档距左上角的x与y的坐标
+        
+
+        // 图片随鼠标移动而移动
+        var div=document.querySelector('.box')
+        document.addEventListener('mousemove',function(e){
+            div.style.top=+e.clientY+'px'
+            div.style.left=e.clientX + 'px'
+        })
+    </script>
+</body>
+</html>

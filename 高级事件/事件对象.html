@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+
+    <script>
+        var div = document.querySelector('div')
+        div.onclick =function(event){  //event就是一个事件对象，事件创建后才会存在，里面包含了一系列与事件相关的信息
+                console.log(event);  //比如点击时鼠标的坐标   可以自主命名
+        } 
+        
+        // 事件对象的属性和方法
+        div.onclick =function(e){  
+            console.log(e.target);  //target返回的是触发事件的对象  this指向的是绑定事件的对象
+            console.log(e.type);   //type是事件类型
+            e.preventDefault()    //阻止默认行为
+        } 
+
+        // 阻止事件冒泡的两种方式
+        // e.stopPropagation()  dom标准
+        // e.cancelBubble=true   低版本浏览器
+    </script>
+</body>
+</html>

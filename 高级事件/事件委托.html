@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <ul>
+            <li>内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+            <li>内容4</li>
+            <li>内容5</li>
+        </ul>
+
+    <script>
+        // 事件委托也称为事件代理
+
+        // 事件委托的原理：
+        // 不要给每个子节点单独设置事件监听器，而是将事件监听器设置在其父节点上，利用冒泡原理影响设置每个子节点
+
+        var ul =document.querySelector('ul')
+        ul.addEventListener('click',function(e){
+            var a= e.target.childNodes[0].data 
+            alert(a)
+        })
+
+
+        // 常见鼠标事件
+        // contextmenu 可以禁用右键菜单
+        // selectstart 禁止选中文字
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 1px;
+            height: 1px;
+            border-top: 20px solid black ;
+            border-left: 20px solid white;
+            /* border-bottom: 20px solid green; */
+            border-right: 20px solid white;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+    </div>
+    <script>
+        // 键盘事件对象就是键盘键盘触发的事件产生的对象
+
+        // keyup 按键弹起的时候触发
+        document.addEventListener('keyup',(e)=>{  //不区分字母的大小写
+            console.log('up');
+            
+        })
+        
+        // keydown 按键按下的时候触发
+        document.addEventListener('keydown',()=>{
+            console.log('down');
+        })
+
+        // keypress 按键弹起的时候触发  不能识别功能键 比如shift ctrl
+        document.addEventListener('keypress',(e)=>{  //可以区分字母的大小写
+            console.log('press'); 
+            console.log(e.keyCode);
+        })
+
+        // 键盘对象的keyCode可以显示对应键的AscII码值
+    </script>
+</body>
+</html>
