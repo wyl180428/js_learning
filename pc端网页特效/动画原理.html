@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 原理：通过定时器不断移动盒子的位置
+        var div = document.querySelector('div')
+        var s =100
+        function animate(target,second){
+            clearInterval('timer')
+            var timer = setInterval(()=>{
+                    target.style.left=div.offsetLeft+1+'px'
+                },second)
+        }
+        document.addEventListener("keydown",(e)=>{
+            if(e.key=='d'){
+                animate(div,s)
+            }
+        })
+       
+        // 缓动动画
+        // 让盒子每次移动的距离慢慢变小，
+    </script>
+</body>
+</html>

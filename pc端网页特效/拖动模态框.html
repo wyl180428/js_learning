@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            text-align: center;
+            margin: 0;
+        }
+        body{
+            cursor: default;
+        }
+        .tan{
+            display: none;
+            position: fixed;
+            width: 500px;
+            height: 300px;
+            background-color: #cfd9df;
+            top: 150px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .title{
+            text-align: center;
+            font-weight: bold;
+            cursor: move;
+        }
+        .guan{
+            position: relative;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: #cfd9df;
+            left: 98%;
+            top: -10%;
+            text-align: center;
+            line-height: 40px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="text"><h2>点击登录</h2></div>
+
+    <div class="tan">
+        <div class="title">登录VIP</div>
+        <div class="guan">关闭</div>
+    </div>
+
+    <script>
+        var text = document.querySelector('.text')
+        var tan =document.querySelector('.tan')
+        var guan = document.querySelector('.guan')
+        var title = document.querySelector('.title')
+        text.addEventListener('click',()=>{
+            document.body.style.backgroundColor='#e2ebf0'
+            tan.style.display='block'
+        })
+
+        guan.addEventListener('click',()=>{
+            document.body.style.backgroundColor=''
+            tan.style.display='none'
+        })
+
+        title.addEventListener('mousedown',(e)=>{
+            var x=e.pageX - tan.offsetLeft
+            var y=e.pageY - tan.offsetTop
+            console.log(tan.offsetTop);
+            title.addEventListener('mousemove',fn)
+                // console.log(y);)
+            function fn(c){
+                tan.style.left = c.pageX - x +'px'
+                tan.style.top = c.pageY - y +'px'
+            }
+            title.addEventListener('mouseup',()=>{
+                title.removeEventListener('mousemove',fn)
+            })
+        })
+    </script>
+</body>
+</html>

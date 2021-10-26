@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:1007px;
+            width: 1920px;
+        }
+        .box{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: rebeccapurple;
+        }
+        .food{
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="food"></div>
+    <script>
+        // 获取元素
+        var box = document.querySelector('.box')
+        var food = document.querySelector('.food')
+        // 设置随机食物
+        function show(){
+            var w = Math.floor(Math.random()*document.documentElement.offsetWidth)
+            var h =Math.floor(Math.random()*document.body.offsetHeight)
+            food.style.left=w + 'px'
+            food.style.top = h+'px'
+            if(w<box.offsetLeft-food.offsetWidth&&w>food.offsetLeft+box.offsetWidth
+            && h<box.offsetTop-food.offsetHeight && h<food.offsetTop+box.offsetHeight){
+                show()
+            }
+        }
+        show()
+
+        //速度
+        var s = 100
+
+        // 定时器的名字
+        var timer = null
+
+        document.addEventListener('keydown',(e)=>{
+                clearInterval(timer)
+                timer = setInterval(()=>{
+                    switch(e.key){
+                    case 'd':
+                        box.style.left = box.offsetLeft + 10 +'px'
+                    break;
+                    case 's':
+                        box.style.top = box.offsetTop + 10 +'px'
+                    break;
+                    case 'a' :
+                        box.style.left = box.offsetLeft -10 +'px'
+                    break;
+                    case 'w':
+                        box.style.top = box.offsetTop - 10 +'px'
+                    break;
+                    case 'esc':
+                    clearInterval(timer);
+                    break;
+                    }
+                if(box.offsetTop>=food.offsetTop-box.offsetHeight && box.offsetTop<=food.offsetTop+box.offsetHeight &&
+                box.offsetLeft>=food.offsetLeft-box.offsetWidth && box.offsetLeft<=food.offsetLeft+box.offsetWidth){
+                    // console.log('100');
+                    // box.style.height = box.offsetHeight + 80 +'px';
+
+                    // 暂时没思路
+
+                    s>50?s-5:s
+                    show()
+                }
+                
+            },s)
+            // console.log(box.offsetTop);
+            // console.log(box.offsetLeft);
+        })
+    </script>
+</body>
+</html>

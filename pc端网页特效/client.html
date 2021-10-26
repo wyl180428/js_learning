@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            border: 1px solid rebeccapurple;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // clientTop  clientLeft  可以获取边框的大小，返回值无单位
+
+        var box = document.querySelector('.box')
+        console.log(box.clientLeft);
+
+        // clientWidth 可以获得元素的宽度包括padding 但不包括border
+        console.log(box.clientWidth);
+
+    </script>
+</body>
+</html>
