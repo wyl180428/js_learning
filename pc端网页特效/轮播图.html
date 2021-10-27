@@ -72,18 +72,22 @@
    </style>
 </head>
 <body>
-    <div class="big">
-        <div class="box">
-            <div class="item" style="background-color: purple" index=0>1</div>
-            <div class="item" style="background-color: aqua;" index=1>2</div>
-            <div class="item" style="background-color: blueviolet" index=3>3</div>
-            <div class="item" style="background-color: chartreuse;" index=4>4</div>
+    <div style="margin-left: 300px; margin-top: 200px;">
+        <div class="big">
+            <div class="box">
+                <div class="item" style="background-color: purple" index=0>1</div>
+                <div class="item" style="background-color: aqua;" index=1>2</div>
+                <div class="item" style="background-color: blueviolet" index=3>3</div>
+                <div class="item" style="background-color: chartreuse;" index=4>4</div>
+            </div>
         </div>
+        <ul>
+        </ul>
+        <div class="left"> &lt; </div>
+        <div class="right"> &gt; </div>
     </div>
-    <ul>
-    </ul>
-    <div class="left"> &lt; </div>
-    <div class="right"> &gt; </div>
+
+    
    
     <script>
         var big = document.querySelector('.big')
@@ -107,9 +111,9 @@
         })
         l.addEventListener('click',()=>{
             if(box.offsetLeft===0){
-                box.style.left = -1800 +'px'
+                box.style.left = (-(items[0].offsetWidth)*(items.length-1)) +'px'
             }else{
-                box.style.left = box.offsetLeft + 600 + 'px'
+                box.style.left = box.offsetLeft + items[0].offsetWidth + 'px'
             }
         })
         r.addEventListener('click',()=>{
@@ -143,17 +147,17 @@
                     lis[j].style.backgroundColor =''
                 }
                 this.style.backgroundColor = 'white'
-                box.style.left = this.getAttribute('index') * (-600) +'px'
+                box.style.left = this.getAttribute('index') * (-items[0].offsetWidth) +'px'
             })
         }
         
         var set =function (){
-            if(box.offsetLeft===-1800){
+            if(box.offsetLeft===(-(items[0].offsetWidth)*(items.length-1))){
                 box.style.left = 0
             }else{
-                box.style.left = box.offsetLeft - 600 + 'px'
+                box.style.left = box.offsetLeft - items[0].offsetWidth + 'px'
             }
-            k =Math.abs(box.offsetLeft)/(600)
+            k =Math.abs(box.offsetLeft)/(items[0].offsetWidth)
             for(var i = 0 ; i < lis.length; i++){
                 lis[i].style.backgroundColor = ''
                 lis[k].style.backgroundColor = 'white'
