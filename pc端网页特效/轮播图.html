@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       *{
+           margin: 0;
+           padding: 0;
+           cursor: default;
+       }
+       .big{
+           height: 300px;
+           width: 600px;
+           background-color: blue;
+           cursor: default;
+           overflow: hidden;
+       }
+       .left{
+           display: none;
+           position: relative;
+           font-size: larger;
+           background-color: rgba(0,0, 0, .5);
+           text-align: center;
+           line-height: 25px;
+           color: #fff;
+           top: -180px;
+           width: 25px;
+           height: 50px;
+       }
+       .right{
+           display: none;
+           position: relative;
+           font-size: larger;
+           line-height: 50px;
+           background-color: rgba(0,0, 0, .5);
+           text-align: center;
+           color: #fff;
+           top: -230px;
+           left: 575px;
+           width: 25px;
+           height: 50px;
+       }
+       ul{
+           position: relative;
+           color: #fff;
+           list-style: none;
+           top: -20px;
+           left: 50px;
+       }
+       ul li{
+           float: left;
+           margin-left: 10px;
+           width: 8px;
+           height: 8px;
+           border-radius: 50%;
+           border: 1px solid white;
+           
+       }
+       .box{
+           position: relative;
+           width: 2400px;
+           height: 300px;
+           display: flex;
+       }
+       .item{
+         width: 600px;
+         height: 300px;
+       }
+   </style>
+</head>
+<body>
+    <div class="big">
+        <div class="box">
+            <div class="item" style="background-color: purple" index=0>1</div>
+            <div class="item" style="background-color: aqua;" index=1>2</div>
+            <div class="item" style="background-color: blueviolet" index=3>3</div>
+            <div class="item" style="background-color: chartreuse;" index=4>4</div>
+        </div>
+    </div>
+    <ul>
+    </ul>
+    <div class="left"> &lt; </div>
+    <div class="right"> &gt; </div>
+   
+    <script>
+        var big = document.querySelector('.big')
+
+        var box = document.querySelector('.box')
+
+        var l =document.querySelector('.left')
+        var r =document.querySelector('.right')
+        var ul = document.querySelector('ul')
+
+        var items = document.querySelectorAll('.item')
+        big.addEventListener('mouseenter',()=>{
+            l.style.display = 'block'
+            r.style.display = 'block'
+            clearInterval(timer)
+        })
+        l.addEventListener('mouseenter',()=>{
+            l.style.display = 'block'
+            r.style.display = 'block'
+            clearInterval(timer)
+        })
+        l.addEventListener('click',()=>{
+            if(box.offsetLeft===0){
+                box.style.left = -1800 +'px'
+            }else{
+                box.style.left = box.offsetLeft + 600 + 'px'
+            }
+        })
+        r.addEventListener('click',()=>{
+            set()
+        })
+        ul.addEventListener('mouseenter',()=>{
+            clearInterval(timer)
+        })
+        r.addEventListener('mouseenter',()=>{
+            l.style.display = 'block'
+            r.style.display = 'block'
+            clearInterval(timer)
+        })
+        big.addEventListener('mouseleave',()=>{
+            l.style.display = 'none'
+            r.style.display = 'none'
+            timer = setInterval(set,1000)
+        })
+        for(var i =0 ; i < items.length ;i++){
+            var li = document.createElement('li')
+            li.setAttribute('index',i)
+            ul.appendChild(li)
+        }
+        var k=0
+        var timer = setInterval(set,1000)
+
+        var lis = document.querySelectorAll('li')
+        for(var i = 0 ; i < lis.length; i++){
+            lis[i].addEventListener('click',function(){
+                for(var j = 0 ; j <lis.length; j++){
+                    lis[j].style.backgroundColor =''
+                }
+                this.style.backgroundColor = 'white'
+                box.style.left = this.getAttribute('index') * (-600) +'px'
+            })
+        }
+        
+        var set =function (){
+            if(box.offsetLeft===-1800){
+                box.style.left = 0
+            }else{
+                box.style.left = box.offsetLeft - 600 + 'px'
+            }
+            k =Math.abs(box.offsetLeft)/(600)
+            for(var i = 0 ; i < lis.length; i++){
+                lis[i].style.backgroundColor = ''
+                lis[k].style.backgroundColor = 'white'
+            }
+        }
+        lis[k].style.backgroundColor ='white'
+    </script>
+</body>
+</html>
