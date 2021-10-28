@@ -72,7 +72,7 @@
    </style>
 </head>
 <body>
-    <div style="margin-left: 300px; margin-top: 200px;">
+    <div style="margin-left: 300px; margin-top: 200px;" class="navbar">
         <div class="big">
             <div class="box">
                 <div class="item" style="background-color: purple" index=0>1</div>
@@ -90,6 +90,8 @@
     
    
     <script>
+        var  nav = document.querySelector('.navbar')
+
         var big = document.querySelector('.big')
 
         var box = document.querySelector('.box')
@@ -99,19 +101,14 @@
         var ul = document.querySelector('ul')
 
         var items = document.querySelectorAll('.item')
-        big.addEventListener('mouseenter',()=>{
-            l.style.display = 'block'
-            r.style.display = 'block'
-            clearInterval(timer)
-        })
-        l.addEventListener('mouseenter',()=>{
+        nav.addEventListener('mouseenter',()=>{
             l.style.display = 'block'
             r.style.display = 'block'
             clearInterval(timer)
         })
         l.addEventListener('click',()=>{
             if(box.offsetLeft===0){
-                box.style.left = (-(items[0].offsetWidth)*(items.length-1)) +'px'
+                box.style.left = -((items[0].offsetWidth)*(items.length-1)) +'px'
             }else{
                 box.style.left = box.offsetLeft + items[0].offsetWidth + 'px'
             }
@@ -122,12 +119,7 @@
         ul.addEventListener('mouseenter',()=>{
             clearInterval(timer)
         })
-        r.addEventListener('mouseenter',()=>{
-            l.style.display = 'block'
-            r.style.display = 'block'
-            clearInterval(timer)
-        })
-        big.addEventListener('mouseleave',()=>{
+        nav.addEventListener('mouseleave',()=>{
             l.style.display = 'none'
             r.style.display = 'none'
             timer = setInterval(set,1000)
@@ -152,10 +144,10 @@
         }
         
         var set =function (){
-            if(box.offsetLeft===(-(items[0].offsetWidth)*(items.length-1))){
+            if(box.offsetLeft===-((items[0].offsetWidth)*(items.length-1))){
                 box.style.left = 0
             }else{
-                box.style.left = box.offsetLeft - items[0].offsetWidth + 'px'
+                box.style.left = box.offsetLeft - items[0].offsetWidth - box.offsetLeft + 'px'
             }
             k =Math.abs(box.offsetLeft)/(items[0].offsetWidth)
             for(var i = 0 ; i < lis.length; i++){
