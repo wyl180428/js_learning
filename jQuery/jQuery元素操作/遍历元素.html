@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        var arr =['red','blue','green']
+        $('div').each(function(i,d){   //第一个参数为索引号  第二个元素为DOM元素
+            $(d).css({
+                'width':100,
+                "height":100
+            })
+            $(d).css('backgroundColor',arr[i])
+        })
+
+        // $.each()方法也可以遍历对象
+        $.each(arr,function(i,d){   //第一个参数为索引号  第二个元素为值
+            console.log(d);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+        width:100px;
+        height: 100px;
+        background-color: bisque;
+        display: none;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <button>下拉</button>
+    <button>上拉</button>
+    <button>切换</button>
+    <div class="box"></div>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        $('button').eq(0).click(function(){   //下拉效果
+            $('.box').slideDown()
+        })
+
+        $('button').eq(1).click(function(){    //上拉效果
+            $('.box').slideUp()
+        })
+        $('button').eq(2).click(function(){    //上拉效果
+            $('.box').slideToggle()
+        })
+
+        $('button').eq(2).hover(function(){
+            console.log("---");
+        },function(){
+            console.log('++++');
+        })  //前一个是鼠标经过 ，后一个为鼠标离开
+
+
+        // 动画排列是多次触发动画时，必须把上一次动画执行完毕，才会执行下次动画
+    </script>
+</body>
+</html>

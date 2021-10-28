@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><span>我是哈哈哈</span></div>
+    <input type="text" value="123">
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                <div class="four">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        // 获取设置元素内容
+        console.log($('div').html());
+        // $('div').html('123')
+        //获取设置元素的文本值
+        console.log($('div').text());
+        $('div span').text('123')
+        // 获取表单元素的值
+        console.log($('input').val());
+        $('input').val(4567)
+
+        // parents可以返回所有祖先元素
+        console.log($(".four").parents(".one"));
+
+        // toFixed可以保留小数
+        var num = 25
+        console.log(num.toFixed(2));
+    </script>
+</body>
+</html>

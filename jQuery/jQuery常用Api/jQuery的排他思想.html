@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>内容1</button>
+    <button>内容2</button>
+    <button>内容3</button>
+    <button>内容4</button>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        $('button').click(function(){
+            // 当前元素颜色变化
+            $(this).css('background','red')
+            // 其他元素去掉背景颜色
+            $(this).siblings('button').css('background','')
+            console.log($(this).index());
+        })
+    </script>
+</body>
+</html>
