@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        var obj={}
+        var tag={
+             id:1,
+             uname:'wyl'
+         }
+         $.extend(obj , tag)  //会覆盖以前的相同属性  为浅拷贝
+         console.log(obj);
+         
+        //  浅拷贝是把原来对象的复杂数据类型的地址拷贝给目标对象
+
+        // 深拷贝把原来对象的数据复制一份给目标对象
+    </script>
+</body>
+</html>
