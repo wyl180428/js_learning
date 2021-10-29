@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 300px;
+            height: 400px;
+            margin-left: 200px;
+            margin-top: 1100px;
+            background-color: aqua;
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+    <script src="../jQuery.min.js"></script>
+    <script>
+        // offset()偏移量是距文档的位置，与父元素无关
+        console.log($('.son').offset().left);
+        //position()获取的是距带定位的父元素的位置，并且只能获取不能设置
+        $(".father").css('position','relative')
+        console.log($('.son').position());
+        // scrollTop()表示被卷去的头部的距离
+        $(window).scroll(function(){
+            console.log($(document).scrollTop());
+        })
+    </script>
 </body>
 </html>
